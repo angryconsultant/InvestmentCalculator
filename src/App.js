@@ -2,10 +2,13 @@ import InvestmentHeader from "./components/InvestmentHeader";
 import InvestmentForm from "./components/InvestmentForm";
 import InvestmentResults from "./components/InvestmentResults";
 import { useState } from "react";
+import ReactGA from 'react-ga';
 
 function App() {
   const [userInput, setUserInput] = useState(null);
-  
+  const TRACKING_ID = "G-5LZ7RQ9WLL"; // YOUR_OWN_TRACKING_ID
+
+  ReactGA.initialize(TRACKING_ID);
 
   const calculateHandler = (userInput) => {
     console.log(userInput);
