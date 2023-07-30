@@ -14,11 +14,11 @@ const InvestmentResults = (props) => {
     <table className={styles.result}>
       <thead>
         <tr>
-          <th>Year</th>
-          <th>Total Savings</th>
-          <th>Interest (Year)</th>
-          <th>Total Interest</th>
-          <th>Invested Capital</th>
+          <th>År</th>
+          <th>Totalt Sparande</th>
+          <th>Ränta (År)</th>
+          <th>Ränta (totalt)</th>
+          <th>Investerat kapital</th>
         </tr>
       </thead>
       <tbody>

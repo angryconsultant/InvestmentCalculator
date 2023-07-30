@@ -59,7 +59,7 @@ const InvestmentForm = (props) => {
     <form className={styles.form}>
       <div className={styles["input-group"]}>
         <p>
-          <label htmlFor="current-savings">Current Savings ($)</label>
+          <label htmlFor="current-savings">Startbelopp (SEK)</label>
           <input
             type="number"
             id="current-savings"
@@ -70,7 +70,7 @@ const InvestmentForm = (props) => {
           />
         </p>
         <p>
-          <label htmlFor="yearly-contribution">Yearly Savings ($)</label>
+          <label htmlFor="yearly-contribution">Sparande per år (SEK)</label>
           <input
             type="number"
             id="yearly-contribution"
@@ -84,7 +84,7 @@ const InvestmentForm = (props) => {
       <div className={styles["input-group"]}>
         <p>
           <label htmlFor="expected-return">
-            Expected Interest (%, per year)
+            Ränta per år (%, per år)
           </label>
           <input
             type="number"
@@ -96,7 +96,7 @@ const InvestmentForm = (props) => {
           />
         </p>
         <p>
-          <label htmlFor="duration">Investment Duration (years)</label>
+          <label htmlFor="duration">Sparhorisont (år)</label>
           <input
             type="number"
             id="duration"
@@ -113,10 +113,10 @@ const InvestmentForm = (props) => {
           className={styles.buttonAlt}
           onClick={resetHandler}
         >
-          Reset
+          Återställ
         </button>
         <button type="submit" className={styles.button} onClick={submitHandler}>
-          Calculate
+          Beräkna
         </button>
       </p>
     </form>
