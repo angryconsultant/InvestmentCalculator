@@ -18,7 +18,7 @@ const InvestmentResults = (props) => {
           <th>Totalt Sparande</th>
           <th>Ränta (År)</th>
           <th>Ränta (totalt)</th>
-          <th>Investerat kapital</th>
+          <th className={styles["hidden-mobile"]}>Investerat kapital</th>
         </tr>
       </thead>
       <tbody>
@@ -32,7 +32,7 @@ const InvestmentResults = (props) => {
                 props.initialInvestment -
                 dataPoint.yearlyContribution * dataPoint.year)}
             </td>
-            <td>{formatter.format(props.initialInvestment + (dataPoint.yearlyContribution * dataPoint.year))}</td>
+            <td className={styles["hidden-mobile"]}>{formatter.format(props.initialInvestment + (dataPoint.yearlyContribution * dataPoint.year))}</td>
           </tr>
         ))}
       </tbody>

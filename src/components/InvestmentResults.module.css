@@ -1,4 +1,10 @@
 
+@media (max-width: 480px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
 .result {
     max-width: 50rem;
     margin: 2rem auto;
