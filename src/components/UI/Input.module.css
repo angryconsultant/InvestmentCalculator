@@ -1,4 +1,4 @@
-label {
+.label {
     display: block;
     margin-bottom: 0.25rem;
     font-family: "Roboto Condensed", sans-serif;
@@ -7,7 +7,7 @@ label {
     text-transform: uppercase;
   }
   
-input {
+.input {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #76c0ae;

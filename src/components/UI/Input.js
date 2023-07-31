@@ -5,8 +5,11 @@ const Input = (props) => {
   return (
     <Fragment>
       <p>
-        <label htmlFor={props.id}>{props.label}</label>
+        <label htmlFor={props.id} className={classes.label}>
+          {props.label}
+        </label>
         <input
+          className={classes.input}
           type={props.type}
           id={props.id}
           onChange={props.onChange}
