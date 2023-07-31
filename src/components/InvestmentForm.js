@@ -1,5 +1,7 @@
 import styles from "./InvestmentForm.module.css";
 import React, { useState } from "react";
+import Input from "./UI/Input";
+import Button from "./UI/Button";
 
 const InvestmentForm = (props) => {
   const initialUserInput = {
@@ -27,97 +29,56 @@ const InvestmentForm = (props) => {
     });
   };
 
-  // const currentSavingsChangeHandler = (event) => {
-  //   setUserInput((prevState) => {
-  //     return { ...prevState, "current-savings": event.target.value };
-  //   });
-  //   console.log(event.target.value);
-  // };
-
-  // const yearlyContributionChangeHandler = (event) => {
-  //     setUserInput((prevState) => {
-  //       return { ...prevState, "yearly-contribution": event.target.value };
-  //     });
-  //     console.log(event.target.value);
-  //   };
-
-  //   const expectedReturnChangeHandler = (event) => {
-  //     setUserInput((prevState) => {
-  //       return { ...prevState, "expected-return": event.target.value };
-  //     });
-  //     console.log(event.target.value);
-  //   };
-
-  //   const durationChangeHandler = (event) => {
-  //     setUserInput((prevState) => {
-  //       return { ...prevState, "duration": event.target.value };
-  //     });
-  //     console.log(event.target.value);
-  //   };
-
   return (
-    <form className={styles.form}>
+    <form className={`${styles.form}`}>
       <div className={styles["input-group"]}>
-        <p>
-          <label htmlFor="current-savings">Startbelopp (SEK)</label>
-          <input
-            type="number"
-            id="current-savings"
-            onChange={(event) =>
-              inputChangeHandler("current-savings", event.target.value)
-            }
-            value={userInput["current-savings"]}
-          />
-        </p>
-        <p>
-          <label htmlFor="yearly-contribution">Sparande per år (SEK)</label>
-          <input
-            type="number"
-            id="yearly-contribution"
-            onChange={(event) =>
-              inputChangeHandler("yearly-contribution", event.target.value)
-            }
-            value={userInput["yearly-contribution"]}
-          />
-        </p>
+        <Input
+          id="current-savings"
+          label="Startbelopp (SEK)"
+          type="number"
+          onChange={(event) =>
+            inputChangeHandler("current-savings", event.target.value)
+          }
+          value={userInput["current-savings"]}
+        />
+        <Input
+          id="yearly-contribution"
+          label="Sparande per år (SEK)"
+          type="number"
+          onChange={(event) =>
+            inputChangeHandler("yearly-contribution", event.target.value)
+          }
+          value={userInput["yearly-contribution"]}
+        />
       </div>
       <div className={styles["input-group"]}>
-        <p>
-          <label htmlFor="expected-return">
-            Ränta per år (%, per år)
-          </label>
-          <input
-            type="number"
-            id="expected-return"
-            onChange={(event) =>
-              inputChangeHandler("expected-return", event.target.value)
-            }
-            value={userInput["expected-return"]}
-          />
-        </p>
-        <p>
-          <label htmlFor="duration">Sparhorisont (år)</label>
-          <input
-            type="number"
-            id="duration"
-            onChange={(event) =>
-              inputChangeHandler("duration", event.target.value)
-            }
-            value={userInput["duration"]}
-          />
-        </p>
+        <Input
+          id="expected-return"
+          label="Ränta per år (%, per år)"
+          type="number"
+          onChange={(event) =>
+            inputChangeHandler("expected-return", event.target.value)
+          }
+          value={userInput["expected-return"]}
+        />
+        <Input
+          id="duration"
+          label="Sparhorisont (år)"
+          type="number"
+          onChange={(event) =>
+            inputChangeHandler("duration", event.target.value)
+          }
+          value={userInput["duration"]}
+        />
       </div>
       <p className={styles.actions}>
-        <button
-          type="reset"
-          className={styles.buttonAlt}
-          onClick={resetHandler}
-        >
+        <Button type="reset" className="buttonAlt" onClick={resetHandler}>
           Återställ
-        </button>
-        <button type="submit" className={styles.button} onClick={submitHandler}>
+        </Button>
+
+        <Button type="submit" className="button" onClick={submitHandler}>
           Beräkna
-        </button>
+        </Button>
       </p>
     </form>
   );
