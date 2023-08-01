@@ -2,7 +2,7 @@ import InvestmentHeader from "./components/InvestmentHeader";
 import InvestmentForm from "./components/InvestmentForm";
 import InvestmentResults from "./components/InvestmentResults";
 import { useState } from "react";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 function App() {
   const [userInput, setUserInput] = useState(null);
